@@ -8,7 +8,7 @@
 <p style="text-align: justify">O MVP final consiste em um arquivo .ipynb com a limpeza, manipulação e visualização, um arquivo .twbx com a visualização em painéis organizados em uma história e um website 100% responsivo.</p>
 <p style="text-align: justify"><b style="color:red">!!!</b> A análise se encontra no arquivo `analise-exploratoria/analise.ipynb`, já o Tableau dashboard, em `dashboards/EqualityMapper`.</p>
 
-<p style="text-align: justify">Acesse o website <a href="https://em-reprograma.onrender.com/" target="_blank">aqui</a>.</p>
+<p style="text-align: justify">Acesse o website <a href="https://equality-mapper.onrender.com/" target="_blank">aqui</a>.</p>
 
 <h2 style='font-family: Lucida Console; text-align:center; font-weight: 800'>Global Gender Gap Report:</h2>
 <ul>O <i>Global Gender Gap Report</i> é um ranking anual publicado pelo Fórum Econômico Mundial desde 2005. Examina quatro áreas de desigualdade entre homens e mulheres em 130 economias:
