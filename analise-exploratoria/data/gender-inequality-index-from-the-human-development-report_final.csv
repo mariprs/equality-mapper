@@ -1,0 +1,137 @@
+País,Código,Ano,Índice de Desigualdade de Gênero
+Argentina,ARG,1990,0.442
+Argentina,ARG,2000,0.413
+Argentina,ARG,2019,0.306
+Argentina,ARG,2020,0.293
+Argentina,ARG,2021,0.287
+Bahamas,BHS,1990,0.404
+Bahamas,BHS,2000,0.383
+Bahamas,BHS,2019,0.324
+Bahamas,BHS,2020,0.325
+Bahamas,BHS,2021,0.329
+Barbados,BRB,1990,0.407
+Barbados,BRB,2000,0.361
+Barbados,BRB,2019,0.266
+Barbados,BRB,2020,0.268
+Barbados,BRB,2021,0.268
+Belize,BLZ,1990,0.548
+Belize,BLZ,2000,0.511
+Belize,BLZ,2019,0.406
+Belize,BLZ,2020,0.387
+Belize,BLZ,2021,0.364
+Bolívia,BOL,2000,0.589
+Bolívia,BOL,2019,0.421
+Bolívia,BOL,2020,0.425
+Bolívia,BOL,2021,0.418
+Brasil,BRA,1990,0.552
+Brasil,BRA,2000,0.507
+Brasil,BRA,2019,0.395
+Brasil,BRA,2020,0.395
+Brasil,BRA,2021,0.39
+Chile,CHL,1990,0.512
+Chile,CHL,2000,0.429
+Chile,CHL,2019,0.206
+Chile,CHL,2020,0.21
+Chile,CHL,2021,0.187
+Colômbia,COL,1990,0.529
+Colômbia,COL,2000,0.497
+Colômbia,COL,2019,0.423
+Colômbia,COL,2020,0.425
+Colômbia,COL,2021,0.424
+Costa Rica,CRI,1990,0.478
+Costa Rica,CRI,2000,0.427
+Costa Rica,CRI,2019,0.269
+Costa Rica,CRI,2020,0.259
+Costa Rica,CRI,2021,0.256
+Cuba,CUB,1990,0.439
+Cuba,CUB,2000,0.369
+Cuba,CUB,2019,0.307
+Cuba,CUB,2020,0.307
+Cuba,CUB,2021,0.303
+República Dominicana,DOM,1990,0.58
+República Dominicana,DOM,2000,0.504
+República Dominicana,DOM,2019,0.443
+República Dominicana,DOM,2020,0.434
+República Dominicana,DOM,2021,0.429
+Equador,ECU,1990,0.61
+Equador,ECU,2000,0.505
+Equador,ECU,2019,0.37
+Equador,ECU,2020,0.366
+Equador,ECU,2021,0.362
+El Salvador,SLV,1990,0.54
+El Salvador,SLV,2000,0.529
+El Salvador,SLV,2019,0.37
+El Salvador,SLV,2020,0.365
+El Salvador,SLV,2021,0.376
+Guatemala,GTM,1990,0.592
+Guatemala,GTM,2000,0.584
+Guatemala,GTM,2019,0.488
+Guatemala,GTM,2020,0.485
+Guatemala,GTM,2021,0.481
+Guiana,GUY,2000,0.561
+Guiana,GUY,2019,0.46
+Guiana,GUY,2020,0.455
+Guiana,GUY,2021,0.454
+Haiti,HTI,2019,0.635
+Haiti,HTI,2020,0.636
+Haiti,HTI,2021,0.635
+Honduras,HND,2000,0.534
+Honduras,HND,2019,0.447
+Honduras,HND,2020,0.448
+Honduras,HND,2021,0.431
+Jamaica,JAM,1990,0.471
+Jamaica,JAM,2000,0.434
+Jamaica,JAM,2019,0.363
+Jamaica,JAM,2020,0.336
+Jamaica,JAM,2021,0.335
+México,MEX,1990,0.505
+México,MEX,2000,0.46
+México,MEX,2019,0.317
+México,MEX,2020,0.317
+México,MEX,2021,0.309
+Nicarágua,NIC,1990,0.635
+Nicarágua,NIC,2000,0.592
+Nicarágua,NIC,2019,0.432
+Nicarágua,NIC,2020,0.429
+Nicarágua,NIC,2021,0.424
+Panamá,PAN,1990,0.54
+Panamá,PAN,2000,0.513
+Panamá,PAN,2019,0.398
+Panamá,PAN,2020,0.395
+Panamá,PAN,2021,0.392
+Paraguai,PRY,1990,0.605
+Paraguai,PRY,2000,0.553
+Paraguai,PRY,2019,0.448
+Paraguai,PRY,2020,0.446
+Paraguai,PRY,2021,0.445
+Peru,PER,1990,0.576
+Peru,PER,2000,0.518
+Peru,PER,2019,0.397
+Peru,PER,2020,0.409
+Peru,PER,2021,0.38
+Santa Lúcia,LCA,1990,0.477
+Santa Lúcia,LCA,2000,0.437
+Santa Lúcia,LCA,2019,0.392
+Santa Lúcia,LCA,2020,0.391
+Santa Lúcia,LCA,2021,0.381
+São Vicente e Granadinas,VCT,2019,0.41
+São Vicente e Granadinas,VCT,2020,0.391
+São Vicente e Granadinas,VCT,2021,0.39
+Suriname,SUR,2019,0.423
+Suriname,SUR,2020,0.427
+Suriname,SUR,2021,0.427
+Trinidad e Tobago,TTO,1990,0.456
+Trinidad e Tobago,TTO,2000,0.4
+Trinidad e Tobago,TTO,2019,0.344
+Trinidad e Tobago,TTO,2020,0.345
+Trinidad e Tobago,TTO,2021,0.344
+Uruguai,URY,1990,0.433
+Uruguai,URY,2000,0.381
+Uruguai,URY,2019,0.253
+Uruguai,URY,2020,0.242
+Uruguai,URY,2021,0.235
+Venezuela,VEN,1990,0.563
+Venezuela,VEN,2000,0.519
+Venezuela,VEN,2019,0.492
+Venezuela,VEN,2020,0.492
+Venezuela,VEN,2021,0.492

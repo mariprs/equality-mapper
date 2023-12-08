@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
+
+    <title>EqualityMapper</title>
+
+<style>
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px; /* Espaçamento entre os gráficos */
+}
+
+  .chart-container, .chart-container2, .chart-container3, .chart-container4, .chart-container5, .chart-container6{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+      border: 1px solid #ccc; /* Adicione bordas para destacar os gráficos */
+
+  }
+
+  *{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x:hidden;
+  }
+
+
+</style>
+  </head>
+
+  <body class="h-max-screen">
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color:  rgb(163 163 163);">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="/logo.png" alt="Logo" class="img-fluid" width="50%" >
+    </a>
+    <button class="navbar-toggler" style="background-color: rgb(87 83 78); " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="font-weight: 700">...</span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item rounded sm-w-100" style=" background-color: rgb(87 83 78)">
+          <a class="nav-link active" aria-current="page" style="color: #f1f1f1; font-weight: 600" href="https://www.github.com/mariprs/">sobre o  projeto</a>
+        </li>
+        <li class="nav-item" style="padding-left: 1em">
+          <a class="nav-link" href="http://www.github.com/mariprs" target="_blank" rel="noopener noreferrer">
+            <img src="https://avatars.githubusercontent.com/u/82874024?v=4" alt="" class="img-fluid rounded-circle"
+                 width="45" height="45">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="padding: 1em;">
+  <h1 class="text-stone-50 text-center font-weight-bold h2 text-uppercase" style="  color: #300B00;">observatório de índices de desigualdade de gênero - Brasil</h1>  
+  <p class="text-stone-50 text-center font-weight-bold text-uppercase">Dados de 2021, 2020, 2019, 2000 e 1990</p>
+</div>
+    <!-- Botão um -->
+        <div class="row pb-3">
+  <div class="col-sm-6">
+    <div class="card rounded-pill ">
+      <div class="card-body p-100">
+        <h5 class="card-title text-center text-uppercase">7º Lugar - score de desigualdade de gênero (GII, 2021)</h5>
+        <p class="card-text text-center">A nível de países da região da América Latina e Caribe, o Brasil performa como 7º país mais desigual.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card rounded-pill">
+      <div class="card-body">
+        <h5 class="card-title text-center text-uppercase">63º Lugar - score de desigualdade de gênero (GII, 2021)</h5>
+        <p class="card-text text-center">A nível mundial, o Brasil performa como 63º país mais desigual.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Charts -->
+<div class="grid-container md-flex" style="display: grid;
+     grid-template-columns: repeat(2, 1fr);">
+    <!-- Fila um -->
+    <div class="card chart-container" style="padding: 2em">
+      <canvas id="chart"></canvas>
+    </div>
+    <div class="card chart-container2">
+      <canvas id="chart2"></canvas>
+      </div>
+    </div>
+      <!-- Botão dois -->
+          <div class="row p-3">
+      <div class="col-sm-6">
+      <div class="card rounded-pill ">
+        <div class="card-body">
+          <h5 class="card-title text-center text-uppercase">acima da média da América Latina no Índice de Desigualdade de Gênero</h5>
+          <p class="card-text text-center">Apesar de perto de mudar esse dado, nós ainda estamos acima da média de desigualdade regional.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card rounded-pill">
+        <div class="card-body">
+          <h5 class="card-title text-center text-uppercase">A taxa de fertilidade entre adolescentes brasileiras diminuiu aproximadamente 48.3%</h5>
+          <p class="card-text text-center">A diminuição indica uma mudança cultural, mas também educacional.</p>
+        </div>
+      </div>
+      </div>
+      </div>
+    </br>
+      <!-- Fila dois -->
+<div class="grid-container md-flex" style="display: grid;
+     grid-template-columns: repeat(2, 1fr);">
+
+      <div class="card chart-container3">
+        <canvas id="chart3"></canvas>
+      </div>
+            <div class="card chart-container4">
+        <canvas id="chart4"></canvas>
+      </div>
+    </div>
+  </div>
+    <!-- Botão três -->
+        <div class="row p-3">
+    <div class="col-sm-6">
+    <div class="card rounded-pill ">
+      <div class="card-body">
+        <h5 class="card-title text-center text-uppercase">aumento de 9.55% de 1990 a 2021 para representatividade política</h5>
+        <p class="card-text text-center">Esse dado reflete uma evolução cultural e social promissora.</p>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="card rounded-pill">
+      <div class="card-body">
+        <h5 class="card-title text-center text-uppercase">a pandemia foi responsável pelo impacto que vemos na empregabilidade feminina em cargos sênior</h5>
+        <p class="card-text text-center">Entretanto, tais dados estão ganhando força no cenário pós-pandêmico.</p>
+      </div>
+    </div>
+    </div>
+    </div>
+<!-- Fila três -->
+<div class="grid-container md-flex" style="display: grid;
+     grid-template-columns: repeat(2, 1fr);">
+      <div class="card chart-container3">
+        <canvas id="chart5"></canvas>
+      </div>
+            <div class="card chart-container3">
+        <canvas id="chart6"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center mt-5" style="background-color:  rgb(163 163 163); ">
+    <div class="text-light rounded-md p-3">
+      <p style="color: rgb(55 65 81); font-weight: 600">© website construído em 2023 por Mariana Freitas para o projeto final do bootcamp da {reprograma} de análise e visualização de dados com Python.</p>
+    </div>
+  </footer>
+</div>      
+</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js">
+</script>
+<script>
+const ctx = document.getElementById("chart").getContext('2d');
+const myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ["1990", "2000", "2019", "2020", "2021"],
+    datasets: [{
+      label: 'Progressão do Índice de Desigualdade de Gênero no Brasil ao longo dos anos',
+      backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0.55, 0.51,  0.40,  0.40, 0.39],
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+        }
+      }]
+    },
+    events: false,
+    tooltips: {
+      enabled: false
+    },
+    hover: {
+      animationDuration: 0
+    },
+    animation: {
+      duration: 1,
+      onComplete: function () {
+        const chartInstance = this.chart;
+        const ctx = chartInstance.ctx;
+        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        ctx.fillStyle = 'rgb(255, 99, 132)'; 
+
+        this.data.datasets.forEach(function (dataset, i) {
+          const meta = chartInstance.controller.getDatasetMeta(i);
+          meta.data.forEach(function (point, index) {
+            const data = dataset.data[index];
+            ctx.fillText(data, point._model.x, point._model.y - 5);
+          });
+        });
+      }
+    }
+  },
+});
+</script>
+<script>
+  const ctx2 = document.getElementById("chart2").getContext('2d');
+  const myChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ["1990", "2000", "2019", "2020", "2021"],
+      datasets: [{
+        label: 'Taxa de fertilidade adolescente (nascimentos por 1.000 mulheres entre 15 e 19 anos)',
+        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+        borderColor: 'rgb(255, 159, 64)',
+        data: [88, 87, 50, 47, 46],
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true,
+          }
+        }]
+      },
+      events: false,
+      tooltips: {
+        enabled: false
+      },
+      hover: {
+        animationDuration: 0
+      },
+      animation: {
+        duration: 1,
+        onComplete: function () {
+          const chartInstance = this.chart;
+          const ctx = chartInstance.ctx;
+          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'top';
+          ctx.fillStyle = 'rgb(255, 159, 64)'; 
+
+
+          this.data.datasets.forEach(function (dataset, i) {
+            const meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              const data = dataset.data[index];
+              ctx.fillText(data, bar._model.x, bar._model.y - 5);
+            });
+          });
+        }
+      }
+    },
+  });
+</script>
+<script>
+ const ctx3 = document.getElementById('chart3').getContext('2d');
+
+const myChart3 = new Chart(chart3, {
+  type: 'line',
+  data: {
+    labels: ['1990','2000', '2019', '2020', '2021'],
+    datasets: [
+      {
+        label: 'Média América Latina e Caribe',
+        borderColor:                   'rgb(255, 205, 86)',
+        data: [0.51, 0.48, 0.38, 0.38, 0.37],
+        fill: false,
+      },
+      {
+        label: 'Brasil',
+        borderColor:                           'rgb(255, 159, 64)',
+
+        data: [0.55, 0.51, 0.40, 0.40, 0.39],
+        fill: false,
+      },
+    ],
+  },
+  options: {
+      scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true,
+          }
+        }]
+      },
+      events: false,
+      tooltips: {
+        enabled: false
+      },
+      hover: {
+        animationDuration: 0
+      },
+      animation: {
+        duration: 1,
+        onComplete: function () {
+          const chartInstance = this.chart;
+          const ctx = chartInstance.ctx;
+          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'bottom';
+          ctx.fillStyle =       'rgb(153, 102, 255)';
+          this.data.datasets.forEach(function (dataset, i) {
+            const meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              const data = dataset.data[index];
+              ctx.fillText(data, bar._model.x, bar._model.y - 5);
+            });
+          });
+        }
+      }
+    },
+});
+</script>
+<script>
+  const ctx4 = document.getElementById('chart4').getContext('2d');
+
+const myChart4 = new Chart(chart4, {
+  type: 'line',
+  data: {
+    labels: ['2019', '2020', '2021'],
+    datasets: [
+      {
+        label: 'Aumento de desemprego, homens (%)',
+        borderColor:       'rgb(54, 162, 235)',
+
+        data: [10.15, 11.96, 10.80],
+        fill: false,
+      },
+      {
+        label: 'Aumento de desemprego, mulheres (%)',
+        borderColor:             'rgb(153, 102, 255)',
+        data: [14.49, 16.57, 16.68],
+        fill: false,
+      },
+    ],
+  },
+  options: {
+      scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true,
+          }
+        }]
+      },
+      events: false,
+      tooltips: {
+        enabled: false
+      },
+      hover: {
+        animationDuration: 0
+      },
+      animation: {
+        duration: 1,
+        onComplete: function () {
+          const chartInstance = this.chart;
+          const ctx = chartInstance.ctx;
+          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'bottom';
+          ctx.fillStyle =       'rgb(153, 102, 255)';
+          this.data.datasets.forEach(function (dataset, i) {
+            const meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              const data = dataset.data[index];
+              ctx.fillText(data, bar._model.x, bar._model.y - 5);
+            });
+          });
+        }
+      }
+    },
+});
+</script>
+<script>
+   const ctx5 = document.getElementById("chart5").getContext('2d');
+  const myChart5 = new Chart(ctx5, {
+    type: 'horizontalBar',
+    data: {
+      labels: ["2000", "2019", "2020", "2021"],
+      datasets: [{
+        label: 'Proporção de assentos ocupados por mulheres nos parlamentos nacionais (%)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgb(75, 192, 192)',
+        data: [5.65, 15.01, 14.62, 15.20],
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true,
+          }
+        }]
+      },
+      events: false,
+      tooltips: {
+        enabled: false
+      },
+      hover: {
+        animationDuration: 0
+      },
+      animation: {
+        duration: 1,
+        onComplete: function () {
+          const chartInstance = this.chart;
+          const ctx = chartInstance.ctx;
+          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'bottom';
+          ctx.fillStyle = 'rgb(75, 192, 192)';
+
+
+          this.data.datasets.forEach(function (dataset, i) {
+            const meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              const data = dataset.data[index];
+              ctx.fillText(data, bar._model.x, bar._model.y - 5);
+            });
+          });
+        }
+      }
+    },
+  });
+</script>
+ <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js">
+</script>
+<script>
+const ctx6 = document.getElementById("chart6").getContext('2d');
+const myChart6 = new Chart(ctx6, {
+  type: 'line',
+  data: {
+    labels: ["2019", "2020", "2021"],
+    datasets: [{
+      label: 'Participação feminina no emprego em cargos de gerência sênior e intermediária (%)',
+      backgroundColor: [      'rgba(255, 203, 219, 0.2)'],
+      borderColor:       'rgb(200, 5, 177)',
+      data: [37.60,35.50, 37.20],
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+        }
+      }]
+    },
+    events: false,
+    tooltips: {
+      enabled: false
+    },
+    hover: {
+      animationDuration: 0
+    },
+    animation: {
+      duration: 1,
+      onComplete: function () {
+        const chartInstance = this.chart;
+        const ctx = chartInstance.ctx;
+        ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        ctx.fillStyle = 'rgb(200, 5, 177)'; 
+
+        this.data.datasets.forEach(function (dataset, i) {
+          const meta = chartInstance.controller.getDatasetMeta(i);
+          meta.data.forEach(function (point, index) {
+            const data = dataset.data[index];
+            ctx.fillText(data, point._model.x, point._model.y - 5);
+          });
+        });
+      }
+    }
+  },
+});
+</script>
+</html>
